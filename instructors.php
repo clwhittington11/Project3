@@ -85,7 +85,23 @@
             background-color: #776A61;
             color: white;
         }
-
+		
+		.contactform {
+			font: Georgia;
+			text-align: center;
+			width: 550px;
+			box-shadow: 10px;
+			box-sizing: border-box;
+			border: 10px dotted #789986;
+			
+		}
+		
+		.cf {
+			width: 195px;
+			text-align: right;
+			display: inline-block;
+		}
+		
     </style>
 
     <title>Brooklyn Heights Pilates</title>
@@ -95,15 +111,18 @@
 <body>
 		<!--Form for Emergency Contact Information-->
 
-	<?php require_once('nav.php'); ?>
+	<?php require_once('nav.php');?>
+	<div class="contactform m-auto p-3">
+	<p>Hello! Please enter your emergency contact information in the form below.</p><br>
 	     	<form action="dh.php" method="post">
-				Name: <input type="text" name="name"><br>
-				Relationship: <input type="text" name="relationship"><br>
-				E-mail: <input type="text" name="email"><br>
-				Phone Number: <input type="text" name="phone"><br>
-				<input type="submit">
+				<span class="cf">Your Name:</span> <input type="text" name="employee"><br>
+				<span class="cf">Emergency Contact's Name:</span> <input type="text" name="name"><br>
+				<span class="cf">Relationship:</span> <input type="text" name="relationship"><br>
+				<span class="cf">E-mail:</span> <input type="text" name="email"><br>
+				<span class="cf">Phone Number:</span> <input type="text" name="phone"><br><br>
+				<input type="submit" value="Complete!">
 			</form>
-
+</div>
 		</body>
 
 		</html>

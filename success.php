@@ -89,8 +89,17 @@
             background-color: #776A61;
             color: white;
         }
-
-    </style>
+		
+		.success {
+		font: Georgia;
+		width: 550px;
+		box-shadow: 10px;
+		box-sizing: border-box;
+		text-align: center;
+		border: 10px dotted #789986;
+		}
+		
+	    </style>
 
     <title>Brooklyn Heights Pilates</title>
 
@@ -98,21 +107,18 @@
 
 <body>
 	<?php require_once('nav.php');?>
-		<div>
-			<h2>We got it!</h2>
+		<div class=success m-auto p-3>
+			<h2>Thank you, <?php echo $_SESSION['employee'];?>!</h2>
 			<p>
-				Thank you for providing us with your emergency contact information.<br>
-				
-				Don't worry, we'll keep this information safe.<br>
+				Your emergency contact is <i><?php echo $_SESSION['name'];?></i>.<br>
 				
 				We now have the following information for your emergency contact:<br>
 				
 				Name: <?php echo $_SESSION['name'];?><br>
 				Relationship to self: <?php echo $_SESSION['relationship']?><br>
 				Email: <?php echo $_SESSION['email'];?><br>
-				Phone Number: <?php echo $_SESSION['phone'];?>
-				
-			</p>
-		</div>
-	</body>
+				Phone Number: <?php echo $_SESSION['phone'];?><br>
+				Don't worry, we'll only contact them in case of an emergency.<br>
+			</div>
+		</body>
 </html>

@@ -1,1 +1,21 @@
-[{"name":"Catherine","relationship":"Mother","email":"cat@gmail.com","phone":"123456963"}]
+[{
+	"employee": "Catherine",
+	"name": "bob",
+	"relationship": "Uncle",
+	"email": "bob@gmail.com",
+	"phone": "145285963"
+}, {
+	"employee": "Lisa",
+	"name": "Jackie",
+	"relationship": "Sister",
+	"email": "jackie@gmail.com",
+	"phone": "125858963",
+	"text": "Complete!"
+}, {
+	"employee": "Catherine",
+	"name": "Paula",
+	"relationship": "Mother",
+	"email": "paula@gmail.com",
+	"phone": "123654789",
+	"text": "Complete!"
+}]

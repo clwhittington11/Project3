@@ -16,7 +16,6 @@
 			font-family: serif;
 			font: Georgia;
 		}
-
 		.hero {
 			background-color: #789986;
 			text-align: center;
@@ -79,6 +78,11 @@
 			background-color: #776A61;
 			color: white;
 		}
+		
+		.text-center {
+			color: #789986;
+			font-size: 30px;
+		}
 
 	</style>
 
@@ -89,16 +93,16 @@
 <body>
 	<!-- Navbar-->
 	<?php require_once('nav.php');?>
-	<h1>Employee Emergency Contact Information</h1>
-	<hr>
-	<table class="table">
+	<h1 class="text-center">Employee Emergency Contact Information</h1>
+		<table class="table">
 		<tr>
-			<th>Name</th>
+			<th>Employee's Name</th>
+			<th>Emergency Contact's Name</th>
 			<th>Relationship</th>
 			<th>Email</th>
 			<th>Phone</th>
 		</tr>
-
+		
 		<?php
 		//while in the table, get the json data
 		$d = file_get_contents('data.json');
@@ -109,6 +113,7 @@
 		foreach($d as $k => $o){
 			//for each object in our data, create a table row with table cells. in each table cell, concatenate values from the object we are looping through
 			echo '<tr>
+					<td>'.$o['employee'].'</td>
 					<td>'.$o['name'].'</td>
 					<td>'.$o['relationship'].'</td>
 					<td>'.$o['email'].'</td>
@@ -118,6 +123,7 @@
 	?>
 
 	</table>
+	<hr>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
